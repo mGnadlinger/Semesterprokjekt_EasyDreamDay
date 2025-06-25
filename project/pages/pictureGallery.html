@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+            name="viewport"
+    >
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>EasyDreamDay - Profil</title>
+
+    <link href="../styling/style.css" rel="stylesheet">
+    <script defer src="../javaScript/pictureGallery.js"></script>
+</head>
+<body>
+
+<header>
+    <a href="../index.html">
+        <div id="logo">
+            <div class="logoPic">
+                <img alt="rings" src="../images/icons/rings.png">
+            </div>
+            <h1 id="logoFont">Easy Dream Day</h1>
+        </div>
+    </a>
+
+    <div id="loginButton">
+        <div id="loginStatus">
+            <a href="./profil.html"><p>Anmelden</p></a>
+        </div>
+        <a href="./profil.html">
+            <img alt="user" src="../images/icons/user.png">
+        </a>
+    </div>
+</header>
+
+<div class="pictureGalleryContent">
+    <h2>Die schönsten Momente an diesem besonderen Tag aus jeder Perspektive</h2>
+
+    <form enctype="multipart/form-data" id="uploadForm" method="post">
+        <label for="fileToUpload">Lade deine Bilder hoch:</label>
+        <input id="fileToUpload" multiple name="fileToUpload[]" type="file">
+        <button onclick="uploadImages()" type="button">Hochladen</button>
+    </form>
+
+    <div id="uploadStatus"></div>
+
+    <div id="gallery"></div>
+</div>
+
+<footer>
+    <div class="logoPic" id="footerLogo">
+        <a href="./profil.html">
+            <img alt="user" src="../images/icons/rings.png">
+        </a>
+    </div>
+
+    <div class="column">
+        <p><a href="./profil.html">Profil</a></p>
+        <p><a href="impressum.html">Impressum</a></p>
+    </div>
+
+    <div class="column">
+        <p>
+            EasyDreamDay ist Ihre digitale<br>
+            Lösung für eine reibungslose<br>
+            Hochzeitsplanung für den ganz großen Tag.
+        </p>
+    </div>
+
+    <div class="column">
+        <p>
+            Tel.: 051213463 210<br>
+            Email: easydreamday@office.at<br>
+            Adresse: Traunerstraße 51, 4585 Traun
+        </p>
+
+        <div class="row">
+            <img alt="pinterest" src="../images/icons/pinterest.png">
+            <img alt="facebook" src="../images/icons/facebook.png">
+            <img alt="instagram" src="../images/icons/instagram.png">
+            <img alt="twitter" src="../images/icons/twitter.png">
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

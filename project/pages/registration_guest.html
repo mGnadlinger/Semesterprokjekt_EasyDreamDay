@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>EasyDreamDay - Gästeregistrierung</title>
+
+    <link href="../styling/style.css" rel="stylesheet">
+    <script defer src="../javaScript/registration_guest.js"></script>
+</head>
+<body>
+
+<header>
+    <a href="../index.html">
+        <div id="logo">
+            <div class="logoPic">
+                <img alt="rings" src="../images/icons/rings.png">
+            </div>
+            <h1 id="logoFont">Easy Dream Day</h1>
+        </div>
+    </a>
+
+    <div id="loginButton">
+        <div id="loginStatus">
+            <a href="./profil.html"><p>Anmelden</p></a>
+        </div>
+        <a href="./profil.html">
+            <img alt="user" src="../images/icons/user.png">
+        </a>
+    </div>
+</header>
+
+<div class="guestRegistrationContent">
+
+    <div class="registrationLoginBox">
+
+        <h2>Registrierung für Gäste</h2>
+
+        <form action="../db/registration_guest.php" method="POST">
+
+            <input
+                    id="guest-wedding-code"
+                    name="guest-wedding-code"
+                    placeholder="Hochzeitscode"
+                    type="text"
+                    value=""
+            >
+            <div id="error-guest-wedding-code"></div>
+            <br>
+
+            <input
+                    id="guest-code"
+                    name="guest-code"
+                    placeholder="Gästecode"
+                    type="text"
+                    value=""
+            >
+            <div id="error-guest-code"></div>
+            <br>
+
+            <input
+                    id="guest-username"
+                    name="guest-username"
+                    placeholder="Benutzername"
+                    type="text"
+                    value=""
+            >
+            <div id="error-guest-username"></div>
+            <br>
+
+            <input
+                    id="guest-password"
+                    name="guest-password"
+                    placeholder="Passwort"
+                    type="password"
+                    value=""
+            >
+            <div id="error-guest-password"></div>
+            <br>
+
+            <input
+                    id="guest-password2"
+                    name="guest-password2"
+                    placeholder="Passwort wiederholen"
+                    type="password"
+                    value=""
+            >
+            <div id="error-guest-password2"></div>
+            <br>
+
+            <br>
+            <button name="submit" onclick="createAcc()" type="button">Account erstellen</button>
+        </form>
+
+        <div id="errorGuest"></div>
+
+        <p>Du hast bereits einen Account - <a href="profil.html">Login</a></p>
+    </div>
+
+</div>
+
+<footer>
+    <div class="logoPic" id="footerLogo">
+        <img alt="rings" src="../images/icons/rings.png">
+    </div>
+
+    <div class="column">
+        <p><a href="./profil.html">Profil</a></p>
+        <p><a href="impressum.html">Impressum</a></p>
+    </div>
+
+    <div class="column">
+        <p>
+            EasyDreamDay ist Ihre digitale<br>
+            Lösung für eine reibungslose<br>
+            Hochzeitsplanung für den ganz großen Tag.
+        </p>
+    </div>
+
+    <div class="column">
+        <p>
+            Tel.: 051213463 210 <br>
+            Email: easydreamday@office.at <br>
+            Adresse: Traunerstraße 51, 4585 Traun
+        </p>
+
+        <div class="row">
+            <img alt="pinterest" src="../images/icons/pinterest.png">
+            <img alt="facebook" src="../images/icons/facebook.png">
+            <img alt="instagram" src="../images/icons/instagram.png">
+            <img alt="twitter" src="../images/icons/twitter.png">
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

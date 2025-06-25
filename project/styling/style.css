@@ -1,0 +1,909 @@
+:root {
+    --background: #ffffff;
+    --font: #000000;
+    --darkpink: #BF5E78;
+    --middlepink: #D98FA3;
+    --lightpink: #E1C3C5;
+}
+
+@font-face {
+    font-family: 'Arima';
+    src: url('../fonts/Arima/Arima.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Kapakana';
+    src: url('../fonts/kapakana/Kapakana.ttf') format('truetype');
+}
+
+
+body {
+    font-family: Arima, monospace;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+[contenteditable="true"] {
+    caret-color: transparent;
+}
+
+a {
+    text-decoration: none;
+    color: var(--font);
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5vw 1vw;
+    background-color: var(--lightpink);
+    color: var(--font);
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+.logoPic {
+    background-color: var(--middlepink);
+    border-radius: 50%;
+    padding: 0.3vw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.logoPic img {
+    height: 4vw;
+}
+
+#logoFont {
+    font-family: Kapakana, serif;
+    font-size: 3.5vw;
+    font-weight: normal;
+    padding-left: 2vw;
+    color: var(--font);
+    margin: 0 0;
+}
+
+#loginButton {
+    display: flex;
+    align-items: center;
+    background-color: var(--darkpink);
+    color: white;
+    padding: 0.5vw 1vw;
+    border-radius: 2vw;
+    cursor: pointer;
+}
+
+#loginButton p {
+    margin: 0;
+    padding-right: 2vw;
+    font-size: 110%;
+    color: white;
+}
+
+#loginButton a {
+    display: flex;
+    align-items: center;
+}
+
+#loginButton img {
+    height: 1.5vw;
+    transition: all 0.5s;
+}
+
+#loginButton img:hover {
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5vw 1vw;
+    }
+
+    .logoPic img {
+        height: 7vw;
+    }
+
+    #logoFont {
+        font-size: 7vw;
+    }
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 1vw 10vw 1vw 2vw;
+    background-color: var(--lightpink);
+}
+
+.column {
+    width: 30%;
+    text-align: center;
+}
+
+.column a {
+    text-decoration: underline;
+    color: var(--font);
+    font-weight: bold;
+}
+
+.column a:hover {
+    color: var(--darkpink);
+}
+
+#footerLogo {
+    height: 4vw;
+    width: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footerLogo img {
+    width: 100%;
+    object-fit: contain;
+}
+
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin-top: 1vw;
+}
+
+.row img {
+    width: 2.5vw;
+    height: 2.5vw;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin: 0 2%;
+}
+
+.row img:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 767px) {
+    footer {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .row img {
+        width: 5vw;
+        height: 5vw;
+    }
+
+    #footerLogo img {
+        height: 10vw;
+    }
+
+    .column {
+        width: 70%
+    }
+
+    #footer .column .row {
+        flex-direction: row;
+    }
+}
+
+
+/* Startseite */
+
+.homeHeader {
+    background-image: url("../images/home/pexels_shoes_bouquet.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 55vw;
+}
+
+#buttonBanner {
+    background-color: var(--background);
+    opacity: 0.8;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    top: 30vw;
+    width: 100%;
+    padding: 0.5% 0;
+}
+
+#buttonBanner h3 {
+    font-size: 250%;
+    margin: 0;
+}
+
+.homeContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.zickzackbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2% 0;
+    padding: 2% 3%;
+}
+
+.zickzackbox .homeContentText {
+    width: 60%;
+    background-color: var(--background);
+    padding: 2% 3%;
+}
+
+.zickzackbox img {
+    width: 25%;
+    height: auto;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 767px) {
+
+    #buttonBanner {
+        flex-direction: column;
+    }
+
+    #buttonBanner h3 {
+        font-size: 180%;
+    }
+
+    .zickzackbox {
+        flex-direction: column;
+        margin: 3% 0;
+        padding: 3% 3%;
+        width: 100%;
+    }
+
+    .zickzackbox img {
+        width: 94%;
+        margin: 0 auto;
+    }
+
+    .zickzackbox .homeContentText {
+        width: 94%;
+        margin: 0 auto;
+    }
+}
+
+/* Impressum */
+
+.impressumContent {
+    background-color: var(--darkpink);
+    margin: 2% 0;
+    padding: 1% 3%;
+}
+
+#impressumBox {
+    background-color: var(--background);
+    padding: 1%;
+}
+
+
+/* Gäste Registrierung */
+
+.guestRegistrationContent {
+    background-image: url("../images/Login/rings.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 4% 0;
+}
+
+.registrationLoginBox {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 1%;
+    margin: 0 auto;
+    border-radius: 10px;
+    text-align: center;
+    width: 40%;
+}
+
+.registrationLoginBox input {
+    width: 96%;
+    padding: 2%;
+    margin-bottom: 1%;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--middlepink);
+    color: white;
+    font-size: 0.9em;
+}
+
+.registrationLoginBox input::placeholder {
+    color: white;
+}
+
+.registrationLoginBox button {
+    padding: 2% 4%;
+    background-color: var(--darkpink);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 2%;
+    font-size: 1em;
+}
+
+.registrationLoginBox p {
+    margin-top: 3%;
+    font-size: 1em;
+    color: var(--font);
+}
+
+.registrationLoginBox a {
+    color: var(--darkpink);
+    transform: scale(1.0);
+    transition: transform 0.3s ease;
+}
+
+.registrationLoginBox a:hover {
+    transform: scale(1.5);
+}
+
+@media screen and (max-width: 767px) {
+    .registrationLoginBox {
+        width: 70%;
+    }
+}
+
+/* Hochzeit planen */
+
+#registrationBanner {
+    background-image: url("../images/Login/bouquet.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 25vw;
+    color: white;
+}
+
+#registrationBanner #buttonBanner {
+    top: 20vw;
+    color: var(--font);
+}
+
+form {
+    padding: 1vw 0;
+}
+
+#plannerRegistrationBox,
+#bridalCoupleBox,
+#information,
+#schedule,
+#wishes,
+#todos,
+#plannerTodos,
+#guests,
+#profilWeddingInformation,
+#pictureGallery {
+    background-color: var(--middlepink);
+    margin-top: 2em;
+    padding: 2%;
+    width: 100%;
+}
+
+#bridalCoupleBox, #schedule, #wishes, #plannerTodos {
+    background: var(--lightpink);
+}
+
+#pictureGallery {
+    background-color: var(--darkpink);
+}
+
+#pictureGallery div {
+    background: var(--middlepink);
+    border-radius: 10px;
+    width: 20%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 110%;
+    color: var(--background);
+}
+
+#line {
+    width: 0.1vw;
+    background: var(--darkpink);
+}
+
+.partnerBox {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.partnerBox input, .partnerBox select {
+    margin: 0.9vw 0;
+}
+
+input, select {
+    width: 95%;
+    padding: 0.7em;
+    margin-bottom: 0.4em;
+    border: 1px solid #ccc;
+    border-radius: 0.5em;
+    color: var(--font);
+    background: var(--background);
+    font-size: 100%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 2%;
+}
+
+
+button {
+    background-color: var(--darkpink);
+    color: var(--font);
+    padding: 0.5em 1em;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 0.8em;
+    cursor: pointer;
+
+    transition: background-color 0.3s;
+    margin: 2%;
+}
+
+button:hover {
+    background-color: #c0597a;
+}
+
+#error,
+div[id^="error"] {
+    color: red;
+    font-size: 0.9em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+table {
+    width: 100%;
+}
+
+th, td {
+    padding: 0.5vw;
+}
+
+#process input {
+    width: 100%;
+    padding: 0.8em;
+}
+
+.add-btn {
+    background-color: var(--middlepink);
+    border: 1px solid #000;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.1%;
+    width: 2vw;
+    height: 2vw;
+    text-align: center;
+}
+
+.add-btn img {
+    width: 90%;
+    height: 90%;
+}
+
+
+.add-btn:hover {
+    background-color: var(--darkpink);
+}
+
+.btn-guest {
+    width: 40%;
+    background: var(--lightpink);
+    text-align: center;
+}
+
+#todos, #plannerTodos {
+    text-align: center;
+}
+
+#popup {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 1%;
+    border: 2px solid #ccc;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 1000;
+    border-radius: 10px;
+    min-width: 250px;
+}
+
+.event-dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--darkpink);
+    border-radius: 50%;
+    margin: 0.1% auto 0 auto;
+}
+
+#popup-close {
+    cursor: pointer;
+    color: var(--darkpink);
+    float: right;
+    font-size: 2vw;
+}
+
+#popup li {
+    text-align: left;
+}
+
+.btn-todos {
+    background: var(--lightpink);
+}
+
+@media screen and (max-width: 767px) {
+    #bridalCoupleBox .row {
+        flex-direction: column;
+    }
+
+    #bridalCoupleBox .row {
+        justify-content: center;
+        align-items: center;
+    }
+
+    #bridalCoupleBox .row .partnerBox {
+        margin-bottom: 2%;
+        width: 100%;
+    }
+
+    .add-btn {
+        width: 4vw;
+        height: 4vw;
+    }
+
+    .btn-guest {
+        width: 60%;
+        padding: 0.9em;
+    }
+}
+
+
+/* Profil */
+
+.profilContent {
+    background-image: url("../images/Login/rings.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5% 0;
+}
+
+.profilContent h2 {
+    text-align: center;
+}
+
+
+#profilWeddingInformation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#informationDate {
+    background: var(--darkpink);
+    border-radius: 10px;
+    width: 20%;
+    text-align: center;
+    font-size: 110%;
+    color: var(--background);
+}
+
+#informationDate p {
+    margin: 0;
+    padding: 2% 5%;
+}
+
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: 1% auto;
+}
+
+.informationsboxen {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    font-size: 110%;
+    border-radius: 5px;
+    background: var(--lightpink);
+    align-items: center;
+}
+
+.informationsboxen div {
+    background-color: #f2f2f2;
+    border: none;
+    padding: 1%;
+    border-radius: 6px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: 2%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.box {
+    background-color: #e8b5bc;
+    padding: 20px;
+    border-radius: 6px;
+    margin-top: 30px;
+}
+
+.box h3 {
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.box ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+#schedule .row {
+    justify-content: left;
+}
+
+#schedule .row div {
+    margin-right: 2%;
+}
+
+#schedule #verticalLine {
+    margin-left: 6vw;
+}
+
+.profilContent #wishes {
+    background: var(--middlepink);
+}
+
+#wishlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2%;
+    width: 100%;
+}
+
+.wish-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 12px;
+    cursor: pointer;
+    background: var(--background);
+    width: 100%;
+    padding: 0 1%;
+    margin: 1% 0;
+}
+
+
+.wish-icon {
+    width: 48px;
+    height: 48px;
+    background-color: var(--lightpink);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wish-icon img {
+    width: 70%;
+    height: 70%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.wish-item strong {
+    color: var(--darkpink);
+}
+
+#invitationRow {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+#guests button {
+    padding: 0.1em 0.6em;
+    font-size: 90%;
+    margin: 1%;
+}
+
+#guests #invitationRow button p {
+    color: var(--background);
+}
+
+.legend {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #ccc;
+}
+
+.legend-color.yes {
+    background-color: #E1C3C5;
+}
+
+.legend-color.pending {
+    background-color: #fff;
+}
+
+
+.guest-card.yes-background {
+    background-color: #E1C3C5;
+}
+
+
+#guestList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.guest-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 40%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.guest-card p, .guest-card h4 {
+    margin: 0;
+    padding: 2% 5%;
+}
+
+.pictureGalleryContent h2 {
+    text-align: center;
+    margin: 6% auto;
+    font-size: 200%;
+    color: var(--middlepink);
+}
+
+.pictureGalleryContent form {
+    background-color: var(--middlepink); /* zartes Rosa */
+    padding: 2%;
+    margin: 2% auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    font-size: 110%;
+    font-weight: bolder;
+}
+
+.pictureGalleryContent input[type="file"] {
+    padding: 1%;
+    border: 2px dashed var(--lightpink);
+    border-radius: 8px;
+    width: 60%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: small;
+}
+
+.pictureGalleryContent input[type="submit"] {
+    width: 20%;
+    padding: 1% 1%;
+    background-color: var(--darkpink);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: medium;
+}
+
+.pictureGalleryContent input[type="submit"]:hover {
+    background-color: #a43a60;
+}
+
+#uploadStatus {
+    text-align: center;
+}
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 1% auto;
+    gap: 1vw;
+    justify-content: start;
+    background: var(--darkpink);
+    padding: 1% 5%;
+}
+
+#gallery div {
+    width: 22.5%;
+    background: var(--background);
+    padding: 0.7%;
+    border-radius: 5px;
+}
+
+#gallery div img {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 767px) {
+    #guestList {
+        flex-direction: column;
+    }
+
+    .guest-card {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    #profilWeddingInformation #informationDate {
+        width: 30%;
+    }
+
+    #profilWeddingInformation .row {
+        width: 90%;
+    }
+}

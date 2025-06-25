@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>EasyDreamDay - Hochzeit planen</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/color-calendar/dist/css/theme-basic.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/color-calendar/dist/bundle.min.js"></script>
+
+    <link href="../styling/style.css" rel="stylesheet"/>
+    <script defer src="../javaScript/registration_planner.js"></script>
+</head>
+<body>
+
+<header>
+    <a href="../index.html">
+        <div id="logo">
+            <div class="logoPic">
+                <img alt="rings" src="../images/icons/rings.png">
+            </div>
+            <h1 id="logoFont">Easy Dream Day</h1>
+        </div>
+    </a>
+
+    <div id="loginButton">
+        <div id="loginStatus"><a href="./profil.html"><p>Anmelden</p></a></div>
+        <a href="./profil.html"><img alt="user" src="../images/icons/user.png"></a>
+    </div>
+
+</header>
+
+<div class="plannerRegistrationContent">
+
+    <div id="registrationBanner">
+        <div id="buttonBanner">
+            <h3>Traumhochzeit planen</h3>
+        </div>
+    </div>
+
+    <form action="../db/registration_planner.php" method="POST">
+
+        <div id="plannerRegistrationBox">
+            <h2>Registrierung</h2>
+
+            <input id="reg-username" name="reg-username" placeholder="Username" type="text">
+            <div id="error-reg-username"></div>
+            <br>
+
+            <input id="reg-firstname" name="reg-firstname" placeholder="Vorname" type="text">
+            <div id="error-reg-firstname"></div>
+            <br>
+
+            <input id="reg-lastname" name="reg-lastname" placeholder="Nachname" type="text">
+            <div id="error-reg-lastname"></div>
+            <br>
+
+            <input id="reg-email" name="reg-email" placeholder="Email" type="email">
+            <div id="error-reg-email"></div>
+            <br>
+
+            <input id="reg-telefon" name="reg-telefon" placeholder="Telefon" type="tel">
+            <div id="error-reg-telefon"></div>
+            <br>
+
+            <input id="reg-password" name="reg-password" placeholder="Passwort" type="password">
+            <div id="error-reg-password"></div>
+            <br>
+
+            <input id="reg-password2" name="reg-password2" placeholder="Passwort wiederholen" type="password">
+            <div id="error-reg-password2"></div>
+            <br>
+        </div>
+
+        <div id="bridalCoupleBox">
+            <h2>Brautpaar</h2>
+            <div class="row">
+                <div class="partnerBox">
+                    <select id="bridal-type1" name="bridal-type1">
+                        <option value="Braut">Braut</option>
+                        <option value="Braeutigam">Bräutigam</option>
+                    </select>
+
+                    <input id="bridal-firstname1" name="bridal-firstname1" placeholder="Vorname" type="text">
+                    <div id="error-bridal-firstname1"></div>
+                    <br>
+
+                    <input id="bridal-lastname1" name="bridal-lastname1" placeholder="Nachname" type="text">
+                    <div id="error-bridal-lastname1"></div>
+                    <br>
+
+                    <input id="bridal-email1" name="bridal-email1" placeholder="Email" type="email">
+                    <div id="error-bridal-email1"></div>
+                    <br>
+
+                    <input id="bridal-telefon1" name="bridal-telefon1" placeholder="Telefon" type="tel">
+                    <div id="error-bridal-telefon1"></div>
+                    <br>
+                </div>
+
+                <div id="line"></div>
+
+                <div class="partnerBox">
+                    <select id="bridal-type2" name="bridal-type2">
+                        <option value="Braut">Braut</option>
+                        <option value="Braeutigam">Bräutigam</option>
+                    </select>
+
+                    <input id="bridal-firstname2" name="bridal-firstname2" placeholder="Vorname" type="text">
+                    <div id="error-bridal-firstname2"></div>
+                    <br>
+
+                    <input id="bridal-lastname2" name="bridal-lastname2" placeholder="Nachname" type="text">
+                    <div id="error-bridal-lastname2"></div>
+                    <br>
+
+                    <input id="bridal-email2" name="bridal-email2" placeholder="Email" type="email">
+                    <div id="error-bridal-email2"></div>
+                    <br>
+
+                    <input id="bridal-telefon2" name="bridal-telefon2" placeholder="Telefon" type="tel">
+                    <div id="error-bridal-telefon2"></div>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+        <div id="information">
+            <h2>Die wichtigsten Informationen</h2>
+            <div class="row">
+                <input id="info-date" name="info-date" placeholder="Datum" type="date">
+                <input id="info-time" name="info-time" placeholder="Uhrzeit" type="time">
+            </div>
+            <div class="row">
+                <select id="info-style" name="info-style">
+                    <option value="kirchlich">kirchlich</option>
+                    <option value="standesamtlich">standesamtlich</option>
+                    <option value="frei">frei</option>
+                </select>
+                <input id="info-dresscode" name="info-dresscode" placeholder="Dresscode" type="text">
+            </div>
+            <div class="row">
+                <input id="info-location1" name="info-location1" placeholder="Ort 1" type="text">
+                <input id="info-location2" name="info-location2" placeholder="Ort 2" type="text">
+            </div>
+        </div>
+
+        <div id="schedule">
+            <h2>Hochzeitsablauf</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Uhrzeit</th>
+                    <th>Programmpunkt</th>
+                    <th>Treffpunkt</th>
+                </tr>
+                </thead>
+                <tbody id="schedule-body">
+                <tr>
+                    <td><input name="schedule-time[]" type="time"></td>
+                    <td><input name="schedule-program[]" type="text"></td>
+                    <td><input name="schedule-meeting[]" type="text"></td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="add-btn" onclick="addRowToSchedule()"><img src="../images/icons/hinzufugen.png"></div>
+        </div>
+
+        <div id="guests">
+            <h2>Hochzeitsgäste</h2>
+
+            <table>
+                <thead>
+                <tr>
+                    <th>Email</th>
+                    <th>Vorname</th>
+                    <th>Nachname</th>
+                    <th>Zusatztext</th>
+                </tr>
+                </thead>
+                <tbody id="guest-body">
+                <tr>
+                    <td><input name="guest-email[]" type="email"></td>
+                    <td><input name="guest-firstname[]" type="text"></td>
+                    <td><input name="guest-lastname[]" type="text"></td>
+                    <td><input name="guest-note[]" type="text"></td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="add-btn btn-guest" onclick="addPersonRowToGuest()">Person hinzufügen</div>
+
+            <div class="add-btn btn-guest" onclick="addGroup()">Personengruppe hinzufügen</div>
+
+            <div id="groups-container"></div>
+        </div>
+
+        <template id="group-template">
+            <div class="group-block">
+                <h3>Gruppe <span class="group-index"></span></h3>
+                <label>Name der Gruppe:</label>
+                <input name="guestgroup[{i}][name]" placeholder="Gruppenname" type="text"/>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Email</th>
+                        <th>Vorname</th>
+                        <th>Nachname</th>
+                        <th>Zusatztext</th>
+                    </tr>
+                    </thead>
+                    <tbody class="member-list">
+                    <tr>
+                        <td><input name="guestgroup[{i}][members][0][email]" type="email"/></td>
+                        <td><input name="guestgroup[{i}][members][0][firstname]" type="text"/></td>
+                        <td><input name="guestgroup[{i}][members][0][lastname]" type="text"/></td>
+                        <td><input name="guestgroup[{i}][members][0][note]" type="text"/></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="add-btn btn-guest add-member-btn">Mitglied hinzufügen</div>
+            </div>
+        </template>
+
+
+        <div id="wishes">
+            <h2>Geschenkwünsche</h2>
+            <table>
+                <tbody id="wish-body">
+                <tr>
+                    <td><input name="wish[]" type="text"></td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="add-btn" onclick="addRowToWishes()"><img src="../images/icons/hinzufugen.png"></div>
+        </div>
+
+        <div id="todos">
+            <h2>To Do’s</h2>
+            <div id="calendar"></div>
+
+            <br>
+            <table>
+                <thead>
+                <tr>
+                    <th>Datum</th>
+                    <th>Uhrzeit</th>
+                    <th>ToDo</th>
+                </tr>
+                </thead>
+                <tbody id="todo-body">
+                <tr>
+                    <td><input name="todo-date[]" type="date"></td>
+                    <td><input name="todo-time[]" type="time"></td>
+                    <td><input name="todo-text[]" type="text"></td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="add-btn btn-todos" onclick="addRowToToDo()"><img src="../images/icons/hinzufugen.png"></div>
+        </div>
+
+        <br>
+        <button name="submit" onclick="createWedding()" type="button">Hochzeit planen</button>
+    </form>
+
+    <div id="errorPlanner"></div>
+</div>
+
+<footer>
+    <div class="logoPic" id="footerLogo">
+        <img alt="rings" src="../images/icons/rings.png">
+    </div>
+
+    <div class="column">
+        <p><a href="./profil.html">Profil</a></p>
+        <p><a href="impressum.html">Impressum</a></p>
+    </div>
+
+    <div class="column">
+        <p>EasyDreamDay ist Ihre digitale
+            Lösung für eine reibungslose
+            Hochzeitsplanung für den ganz großen Tag.</p>
+    </div>
+
+    <div class="column">
+        <p>Tel.: 051213463 210 <br>
+            Email: easydreamday@office.at <br>
+            Adresse: Traunerstraße 51, 4585 Traun</p>
+
+        <div class="row">
+            <img alt="pinterest" src="../images/icons/pinterest.png">
+            <img alt="facebook" src="../images/icons/facebook.png">
+            <img alt="instagram" src="../images/icons/instagram.png">
+            <img alt="twitter" src="../images/icons/twitter.png">
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
