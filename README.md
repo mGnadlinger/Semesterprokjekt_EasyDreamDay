@@ -15,6 +15,14 @@
 - Backend: PHP
 - Datenbank: MySQL (Verwaltung über phpMyAdmin)
 
+
+## Screencast
+
+<video width="600" controls>
+  <source src="Screencast_EasyDreamDay.mp4" type="video/mp4">
+  Dein Browser unterstützt das Video-Tag nicht.
+</video>
+
 ## Sicherheit
 
 * Anmeldung über individuellen Hochzeitscode und Gastcode
