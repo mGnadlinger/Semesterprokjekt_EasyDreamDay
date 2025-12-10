@@ -18,10 +18,7 @@
 
 ## Screencast
 
-<video width="600" controls>
-  <source src="Screencast_EasyDreamDay.mp4" type="video/mp4">
-  Dein Browser unterstützt das Video-Tag nicht.
-</video>
+Der Screencast ist im Ordner Presentation zu finden. 
 
 ## Sicherheit
 
