@@ -20,7 +20,6 @@
 
 Der Screencast ist im Ordner Presentation zu finden. 
 
-## Figma Prototyp 
 
 ## Figma Prototyp
 
